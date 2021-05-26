@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sayur extends Model
 {
-    use HasFactory;
+    public function pesanan_detail(){
+        return $this->hasMany('App\PesananDetail','sayur_id','id');
+    }
 }

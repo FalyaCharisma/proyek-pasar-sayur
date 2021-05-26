@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class PesananDetail extends Model
 {
-    use HasFactory;
+   public function sayur(){
+       return $this->belongsTo('App\Sayur','sayur_id','id');
+   }
+
+   public function pesanan(){
+       return $this->belongsTo('App\Pesanan','pesanan_id','id');
+}
 }
